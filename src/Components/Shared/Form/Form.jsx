@@ -13,7 +13,6 @@ const Form = ({ data, dbPath }) => {
 
   // === Create instance state on mount === //
   useEffect(() => {
-    console.log();
     let template = {};
     if (data) {
       setConfig(data);
@@ -53,7 +52,7 @@ const Form = ({ data, dbPath }) => {
     else setInputValues({ ...inputValues, [input.key]: e.target.value });
   };
 
-  // === Fetch functions === key
+  // === Fetch functions === //
   const createInstance = async (obj) => {
     try {
       const res = await fetch(`${process.env.REACT_APP_API_URL}${url}`, {
