@@ -104,3 +104,39 @@
   box-shadow: inset 0px 0px 0px 3px var(--scarlet);
 }
 
+/*=== Edit btn ===*/
+.editBtn {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin: 5px;
+  padding: 0px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--light-grayish-green);
+  color: var(--grayish-navy);
+  font-size: var(--button);
+  font-weight: var(--button-weight);
+  font-family: inherit;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    box-shadow 400ms cubic-bezier(.2,0,.7,1),
+}
+
+.editBtn:hover,
+.editBtn:focus {
+  box-shadow: 0 0 1px 5px rgba(170, 243, 18, 0.4),
+  0 0 1px 10px rgba(170, 243, 18, 0.1),
+  0 0 1px 15px rgba(168, 243, 18, 0.1);
+  outline: none;
+}
+
+.editBtn:active{
+  box-shadow: none;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 0px 3px var(--light-grayish-green);
+}
+

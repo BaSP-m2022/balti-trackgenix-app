@@ -108,6 +108,7 @@ const Admins = () => {
         </Link>
       </div>
       <List
+        fullList={admins}
         data={formatListData(admins)}
         headers={headers}
         resource={serverPath}

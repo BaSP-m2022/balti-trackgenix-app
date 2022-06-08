@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useParams, useHistory, withRouter } from 'react-router-dom';
 import style from './styles.module.css';
+import Modal from '../Modal/Modal';
 import Button from '../Button/Button';
 
 const Form = ({ data, dbPath }) => {
@@ -9,6 +10,8 @@ const Form = ({ data, dbPath }) => {
   const { goBack } = useHistory();
   const [inputValues, setInputValues] = useState({});
   const [config, setConfig] = useState([]);
+  const [isAdding, setIsAdding] = useState(false);
+  const [modal, setModal] = useState('');
   const url = dbPath || DBPath;
 
   // === Create instance state on mount === //
@@ -64,7 +67,9 @@ const Form = ({ data, dbPath }) => {
       const body = await res.json();
       return { message: body.message, err: body.error };
     } catch (error) {
-      alert(error);
+      // alert(error);
+      setModal(error);
+      setIsAdding(true);
     }
   };
 
@@ -78,7 +83,9 @@ const Form = ({ data, dbPath }) => {
       const body = await res.json();
       return { message: body.message, err: body.error };
     } catch (error) {
-      alert(error);
+      // alert(error);
+      setModal(error);
+      setIsAdding(true);
     }
   };
 
@@ -94,8 +101,9 @@ const Form = ({ data, dbPath }) => {
     }
 
     if (result && result.error === false) setInputValues({});
-    alert(result.message);
-
+    // alert(result.message);
+    setModal(result.message);
+    setIsAdding(true);
     if (id) goBack();
   };
 
@@ -133,6 +141,15 @@ const Form = ({ data, dbPath }) => {
               />
             )}
             {item.type === 'checkbox' && <label htmlFor={item.key}>{item.header}</label>}
+            <Modal
+              handleClose={() => {
+                setIsAdding(false);
+              }}
+              isOpen={isAdding}
+              isConfirmation={false}
+            >
+              <h2>{modal}</h2>
+            </Modal>
           </div>
         );
       })}

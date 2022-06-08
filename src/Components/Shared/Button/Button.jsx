@@ -15,6 +15,9 @@ const Button = ({ children, classes, onClick }) => {
     case 'close':
       classes = styles.closeBtn;
       break;
+    case 'edit':
+      classes = styles.editBtn;
+      break;
     default:
       classes = styles.btn;
       break;

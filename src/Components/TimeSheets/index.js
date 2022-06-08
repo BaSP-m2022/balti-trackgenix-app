@@ -3,7 +3,8 @@ import List from '../Shared/List/List';
 import Form from '../Shared/Form/Form';
 import Loading from '../Shared/Loading/Loading';
 import Button from '../Shared/Button/Button';
-import styles from './time-sheets.module.css';
+import { Link } from 'react-router-dom';
+import styles from './index.module.css';
 
 const TimeSheets = () => {
   const [timeSheetsList, setTimeSheets] = useState([]);
@@ -15,63 +16,63 @@ const TimeSheets = () => {
   const [timeSheetId, setTimesheetId] = useState('');
   const [modal, setModal] = useState(false);
   const [isLoading, setIsLoading] = useState([true]);
-  const resource = 'timesheets';
+  const resource = '/timesheets';
 
-  const data = [
+  const config = [
     {
-      title: 'Employee',
+      header: 'Employee',
       type: 'select',
-      id: 'employee',
+      key: 'employee',
       options: employees,
       required: true
     },
     {
-      title: 'Project',
+      header: 'Project',
       type: 'select',
-      id: 'project',
+      key: 'project',
       options: projects,
       required: true
     },
     {
-      title: 'Role',
+      header: 'Role',
       type: 'text',
-      id: 'role',
+      key: 'role',
       required: true
     },
     {
-      title: 'Date',
+      header: 'Date',
       type: 'date',
-      id: 'date',
+      key: 'date',
       required: true
     },
     {
-      title: 'Rate',
+      header: 'Rate',
       type: 'number',
-      id: 'rate',
+      key: 'rate',
       required: true
     },
     {
-      title: 'Worked Hours',
+      header: 'Worked Hours',
       type: 'number',
-      id: 'workedHours',
+      key: 'workedHours',
       required: true
     },
     {
-      title: 'Description',
+      header: 'Description',
       type: 'text',
-      id: 'description'
+      key: 'description'
     },
     {
-      title: 'Tasks',
+      header: 'Tasks',
       type: 'select',
-      id: 'task',
+      key: 'task',
       options: tasks
     }
   ];
 
   const fetchTimeSheet = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/${resource}`);
+      const response = await fetch(`${process.env.REACT_APP_API_URL}${resource}`);
       const jsonResponse = await response.json();
       setTimeSheets(jsonResponse.data);
       setIsLoading(false);
@@ -143,7 +144,13 @@ const TimeSheets = () => {
     setTasks(tasksData);
   };
 
-  const deleteItem = (id) => {
+  const deleteItem = async (id) => {
+    await fetch(`${process.env.REACT_APP_API_URL}${resource}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-type': 'application/json'
+      }
+    });
     setTimeSheets([...timeSheetsList.filter((timeSheet) => timeSheet._id !== id)]);
   };
 
@@ -189,21 +196,25 @@ const TimeSheets = () => {
   ) : (
     <section className={styles.container}>
       <h2>TimeSheets</h2>
-      {showedScreen ? (
-        <Form data={data} />
-      ) : (
-        <List
-          data={formatListData(timeSheetsList)}
-          headers={headers}
-          resource={resource}
-          deleteItem={deleteItem}
-          editItem={editTimeSheet}
-          method={method}
-        />
-      )}
+      <List
+        fullList={timeSheetsList}
+        data={formatListData(timeSheetsList)}
+        headers={headers}
+        resource={resource}
+        deleteItem={deleteItem}
+        method={method}
+      />
       <div>
-        <Button onClick={() => setShowedScreen(false)}>Timesheet list</Button>
-        <Button onClick={() => setShowedScreen(true)}>Add new Timesheet</Button>
+        <Link
+          to={{
+            pathname: '/timesheets/form',
+            linkData: config,
+            DBPath: resource
+          }}
+          className={styles.LinkReset}
+        >
+          <Button classes="block">Create Timesheet</Button>
+        </Link>
       </div>
     </section>
   );
