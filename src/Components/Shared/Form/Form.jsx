@@ -16,7 +16,6 @@ const Form = ({ data, dbPath }) => {
 
   // === Create instance state on mount === //
   useEffect(() => {
-    console.log();
     let template = {};
     if (data) {
       setConfig(data);
@@ -83,7 +82,6 @@ const Form = ({ data, dbPath }) => {
       const body = await res.json();
       return { message: body.message, err: body.error };
     } catch (error) {
-      // alert(error);
       setModal(error);
       setIsAdding(true);
     }
@@ -101,7 +99,6 @@ const Form = ({ data, dbPath }) => {
     }
 
     if (result && result.error === false) setInputValues({});
-    // alert(result.message);
     setModal(result.message);
     setIsAdding(true);
     if (id) goBack();

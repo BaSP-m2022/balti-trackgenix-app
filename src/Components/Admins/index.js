@@ -102,7 +102,7 @@ const Admins = () => {
             linkData: config,
             DBPath: serverPath
           }}
-          className={styles.LinkReset}
+          className={styles.linkReset}
         >
           <Button classes="block">Create Admin</Button>
         </Link>
