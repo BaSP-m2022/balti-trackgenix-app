@@ -1,9 +1,22 @@
-import React from 'react';
-import styles from './list.module.css';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import styles from './list.module.css';
 import Button from '../Button/Button';
 
 const List = ({ fullList, data, headers, resource, deleteItem, linkData }) => {
+  const [instance, setInstance] = useState({});
+  // === FORMAT OBJECT TYPE KEYS INTO SOMETHING THE FORM CAN READ === //
+  const formatItem = (item, i) => {
+    linkData.forEach((input) => {
+      if (item[input.key] && typeof item[input.key] === 'object') {
+        item[input.key] = input.options[i];
+      }
+    });
+    console.log(item);
+    setInstance(item);
+    console.log(instance);
+  };
+
   return (
     <div className={styles.container}>
       <table className={styles.table}>
@@ -37,8 +50,14 @@ const List = ({ fullList, data, headers, resource, deleteItem, linkData }) => {
                       pathname: `${resource}/form/${row.id}`,
                       linkData: linkData,
                       DBPath: resource,
-                      itemData: fullList[index]
+                      itemData: instance
                     }}
+                    onClick={() =>
+                      formatItem(
+                        fullList.find((timeSheet) => timeSheet._id === row.id),
+                        index
+                      )
+                    }
                   >
                     <Button classes="edit" _id={row.id} resource={resource}>
                       &#9998;

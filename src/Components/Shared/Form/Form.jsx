@@ -16,6 +16,7 @@ const Form = ({ data, dbPath }) => {
 
   // === Create instance state on mount === //
   useEffect(() => {
+    // console.log(itemData);
     let template = {};
     if (data) {
       setConfig(data);
@@ -33,6 +34,8 @@ const Form = ({ data, dbPath }) => {
             formattedItem[item.key] = itemData[item.key]._id;
           } else if (item.type === 'date') {
             formattedItem[item.key] = itemData[item.key].substring(0, 10);
+          } else if (!itemData[item.key] || itemData[item.key] === undefined || null) {
+            formattedItem[item.key] = '';
           } else formattedItem[item.key] = itemData[item.key];
         });
         setInputValues(formattedItem);
@@ -91,8 +94,10 @@ const Form = ({ data, dbPath }) => {
   const submitHandler = async (e) => {
     e.preventDefault();
     let result;
-
-    if (id) {
+    if (!result) {
+      setModal('Something went wrong');
+      return setIsAdding(true);
+    } else if (id) {
       result = await updateInstance(inputValues);
     } else {
       result = await createInstance(inputValues);

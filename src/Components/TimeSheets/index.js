@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import List from '../Shared/List/List';
-import Form from '../Shared/Form/Form';
 import Loading from '../Shared/Loading/Loading';
 import Button from '../Shared/Button/Button';
 import { Link } from 'react-router-dom';
@@ -11,10 +10,6 @@ const TimeSheets = () => {
   const [projects, setProjects] = useState([]);
   const [employees, setEmployees] = useState([]);
   const [tasks, setTasks] = useState([]);
-  const [showedScreen, setShowedScreen] = useState();
-  const [method, setMethod] = useState('POST');
-  const [timeSheetId, setTimesheetId] = useState('');
-  const [modal, setModal] = useState(false);
   const [isLoading, setIsLoading] = useState([true]);
   const resource = '/timesheets';
 
@@ -82,7 +77,7 @@ const TimeSheets = () => {
     }
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     fetchTimeSheet();
     formatDataOptions();
   }, []);
@@ -154,18 +149,9 @@ const TimeSheets = () => {
     setTimeSheets([...timeSheetsList.filter((timeSheet) => timeSheet._id !== id)]);
   };
 
-  const editTimeSheet = (id) => {
-    setMethod('PUT');
-    setShowedScreen(true);
-    setTimesheetId(id);
-    const closeModal = () => {
-      setModal(false);
-    };
-  };
+  // const editTimeSheet = (id) => {
 
-  const closeModal = () => {
-    setModal(false);
-  };
+  // };
 
   const formatListData = (responseData) => {
     const data = responseData.map((timeSheet) => {
@@ -199,10 +185,10 @@ const TimeSheets = () => {
       <List
         fullList={timeSheetsList}
         data={formatListData(timeSheetsList)}
+        linkData={config}
         headers={headers}
         resource={resource}
         deleteItem={deleteItem}
-        method={method}
       />
       <div>
         <Link
