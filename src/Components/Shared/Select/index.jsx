@@ -14,11 +14,11 @@ const Select = ({ text, id, value, required, onChange, item, type }) => {
         type={type}
       >
         <option selected disabled value="">{`select ${item.title}`}</option>
-                {item.options.map((option) => (
-                  <option key={option.id} value={option.id}>
-                    {option.text}
-                  </option>
-                ))}
+          {item.options.map((option) => (
+            <option key={option.id} value={option.id}>
+              {option.text}
+            </option>
+          ))}
       </select>
     </div>
   );
