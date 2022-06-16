@@ -54,3 +54,8 @@
   color: wheat;
   background-color: red;
 }
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-around;
+}

@@ -15,8 +15,11 @@ const Admins = () => {
   const admins = useSelector((state) => state.admins.list);
   const pending = useSelector((state) => state.admins.pending);
   const error = useSelector((state) => state.admins.error);
+  const message = useSelector((state) => state.admins.message);
+  const [confirmation, setConfirmation] = useState(true);
   const [isAdding, setIsAdding] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
+  const [id, setId] = useState('');
 
   const headers = [
     { header: 'First name', key: 'firstName' },
@@ -29,7 +32,8 @@ const Admins = () => {
     dispatch(getAdmins());
   }, []);
 
-  const deleteItem = (id) => {
+  const deleteItem = () => {
+    setConfirmation(false);
     dispatch(deleteAdmin(id));
     setModalMessage('Admin deleted');
     setIsAdding(true);
@@ -69,15 +73,24 @@ const Admins = () => {
         data={formatListData(admins)}
         headers={headers}
         resource={serverPath}
-        deleteItem={deleteItem}
+        deleteItem={(id) => {
+          setId(id);
+          setConfirmation(true);
+          setIsAdding(true);
+        }}
       />
       <div>
         <Link to={'/admins/form'} className={styles.linkReset}>
           <Button classes="block">Create Admin</Button>
         </Link>
       </div>
-      <Modal handleClose={() => closeHandler()} isOpen={isAdding} isConfirmation={false}>
-        <h2>{modalMessage}</h2>
+      <Modal
+        handleClose={() => closeHandler()}
+        isOpen={isAdding}
+        isConfirmation={confirmation}
+        confirmed={deleteItem}
+      >
+        <h2>{confirmation ? 'Are you sure you want to delete this admin?' : modalMessage}</h2>
       </Modal>
     </section>
   );
