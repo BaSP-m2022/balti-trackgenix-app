@@ -6,7 +6,7 @@ import { resetMessage, setModal, updateList } from '../../../redux/Task/actions'
 import List from '../../Shared/List';
 import Button from '../../Shared/Button';
 import Loading from '../../Shared/Loading';
-import Modal from '../../Shared/Modal/Modal';
+import Modal from '../../Shared/Modal';
 import styles from './tasks.module.css';
 
 function Tasks() {

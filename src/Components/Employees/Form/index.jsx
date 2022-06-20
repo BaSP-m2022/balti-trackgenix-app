@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { resetEmployee, resetMessage } from '../../../redux/employees/actions';
 import { getSingleEmployee, createEmployee, editEmployees } from '../../../redux/employees/thunks';
 import Form from '../../Shared/Form';
-import Modal from '../../Shared/Modal/Modal';
+import Modal from '../../Shared/Modal';
 import Loading from '../../Shared/Loading';
 import styles from './employee.module.css';
 

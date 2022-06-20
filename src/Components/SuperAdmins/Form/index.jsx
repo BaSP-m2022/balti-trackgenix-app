@@ -9,7 +9,7 @@ import {
 } from '../../../redux/super admins/thunks';
 import Loading from '../../Shared/Loading';
 import Form from '../../Shared/Form';
-import Modal from '../../Shared/Modal/Modal';
+import Modal from '../../Shared/Modal';
 import styles from './super-admins.module.css';
 
 function SuperAdminsForm() {

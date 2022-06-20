@@ -3,7 +3,7 @@ import styles from './index.module.css';
 import List from '../../Shared/List';
 import Button from '../../Shared/Button';
 import Loading from '../../Shared/Loading';
-import Modal from '../../Shared/Modal/Modal';
+import Modal from '../../Shared/Modal';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProjects, deleteProject } from '../../../redux/projects/thunks';

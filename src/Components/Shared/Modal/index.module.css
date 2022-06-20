@@ -39,7 +39,9 @@
   font-size: 16px;
   cursor: pointer;
 }
-
+.buttonWrapper {
+  display: flex;
+}
 .modalButton {
   border-radius: 4px;
   border: 1px solid black;

@@ -5,7 +5,7 @@ import { getTimesheet, deleteTimesheet } from '../../../redux/timesheets/thunks'
 import { resetMessage, setModal, updateList } from '../../../redux/timesheets/actions';
 import List from '../../Shared/List';
 import Loading from '../../Shared/Loading';
-import Modal from '../../Shared/Modal/Modal';
+import Modal from '../../Shared/Modal';
 import Button from '../../Shared/Button';
 import styles from './index.module.css';
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import List from '../../Shared/List';
-import Modal from '../../Shared/Modal/Modal';
+import Modal from '../../Shared/Modal';
 import Button from '../../Shared/Button';
 import Loading from '../../Shared/Loading';
 import styles from './super-admins.module.css';

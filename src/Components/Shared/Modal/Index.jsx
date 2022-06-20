@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './index.module.css';
+import Button from '../Button';
 
 const Modal = ({ children, isOpen, handleClose, isConfirmation, confirmed }) => {
   if (!isOpen) {
@@ -14,19 +15,19 @@ const Modal = ({ children, isOpen, handleClose, isConfirmation, confirmed }) => 
         </button>
         <div className={styles.childrenContainer}>{children}</div>
         {isConfirmation ? (
-          <div className={styles.buttonwrapper}>
-            <button className={styles.modalButton} onClick={confirmed}>
+          <div className={styles.buttonWrapper}>
+            <Button classes="block" onClick={confirmed}>
               Accept
-            </button>
-            <button className={styles.modalButton} onClick={handleClose}>
+            </Button>
+            <Button classes={'red'} onClick={handleClose}>
               Cancel
-            </button>
+            </Button>
           </div>
         ) : (
-          <div className={styles.buttonwrapper}>
-            <button className={styles.modalButton} onClick={handleClose}>
+          <div className={styles.buttonWrapper}>
+            <Button classes="block" onClick={handleClose}>
               OK
-            </button>
+            </Button>
           </div>
         )}
       </div>

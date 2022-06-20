@@ -5,7 +5,7 @@ import { getEmployees, deleteEmployees } from '../../../redux/employees/thunks';
 import List from '../../Shared/List';
 import Button from '../../Shared/Button';
 import Loading from '../../Shared/Loading';
-import Modal from '../../Shared/Modal/Modal';
+import Modal from '../../Shared/Modal';
 import styles from './employees.module.css';
 import { resetMessage, setModal, updateList } from '../../../redux/employees/actions';
 

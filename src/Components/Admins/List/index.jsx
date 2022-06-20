@@ -4,7 +4,7 @@ import styles from './admins.module.css';
 import List from '../../Shared/List';
 import Button from '../../Shared/Button';
 import Loading from '../../Shared/Loading';
-import Modal from '../../Shared/Modal/Modal';
+import Modal from '../../Shared/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteAdmin, getAdmins } from '../../../redux/admins/thunks';
 import { updateList } from '../../../redux/admins/actions';

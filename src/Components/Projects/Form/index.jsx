@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import Modal from '../../Shared/Modal/Modal';
+import Modal from '../../Shared/Modal';
 import Form from '../../Shared/Form';
 import styles from './index.module.css';
 import { useDispatch, useSelector } from 'react-redux';
