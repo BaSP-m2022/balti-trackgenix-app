@@ -1,0 +1,807 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656182894210' stop='1656182895809'>
+    <name>My Trackgenix test aplication</name>
+    <title>My Trackgenix test aplication</title>
+    <test-cases>
+        <test-case start='1656182894211' status='passed' stop='1656182894212'>
+            <name>"before all" hook</name>
+            <title>"before all" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894212' status='undefined'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='4903b031-ae8d-4796-b504-03323b17dd3f-attachment.json' type='application/json' size='55'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182894218' status='passed' stop='1656182894721'>
+            <name>The Header title should be Home</name>
+            <title>The Header title should be Home</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894220' status='passed' stop='1656182894683'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='8356fd2e-5f98-489c-94f1-2ce15a3692eb-attachment.json' type='application/json' size='76'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894701' status='passed' stop='1656182894717'>
+                    <name>GET /session/:sessionId/element/a446e629-45be-45e1-b48e-5eeaf6121164/text</name>
+                    <title>GET /session/:sessionId/element/a446e629-45be-45e1-b48e-5eeaf6121164/text</title>
+                    <attachments>
+                        <attachment title='Response' source='586d7a35-acc5-408d-a4eb-fe4fa421d5c2-attachment.json' type='application/json' size='6'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='c225672a-6e10-4ba9-8cbc-95caeff31e65-attachment.json' type='application/json' size='83'/>
+            </attachments>
+        </test-case>
+        <test-case start='1656182894722' status='passed' stop='1656182894758'>
+            <name>The Navbar title should be TRACKGENIX</name>
+            <title>The Navbar title should be TRACKGENIX</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894723' status='passed' stop='1656182894739'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='0c1584fe-367d-44c5-a517-e79b22337767-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='bfd2519d-0334-47df-8f8f-0a2562c3ead5-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894743' status='passed' stop='1656182894757'>
+                    <name>GET /session/:sessionId/element/334da9ab-3780-44ad-937d-35aee505fb67/text</name>
+                    <title>GET /session/:sessionId/element/334da9ab-3780-44ad-937d-35aee505fb67/text</title>
+                    <attachments>
+                        <attachment title='Response' source='d95a2c7c-5f4b-4338-b12c-04b66f51a314-attachment.json' type='application/json' size='12'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182894759' status='passed' stop='1656182894792'>
+            <name>The Sidebar title should be Shortcuts</name>
+            <title>The Sidebar title should be Shortcuts</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894760' status='passed' stop='1656182894775'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='843d2555-e690-45f7-a264-30220978b27a-attachment.json' type='application/json' size='82'/>
+                        <attachment title='Response' source='ee344dd6-8c88-4aaa-aa87-2cbfe8beb0da-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894777' status='passed' stop='1656182894791'>
+                    <name>GET /session/:sessionId/element/0cd48e9c-abc5-4d34-a4fd-0958cc23be4c/text</name>
+                    <title>GET /session/:sessionId/element/0cd48e9c-abc5-4d34-a4fd-0958cc23be4c/text</title>
+                    <attachments>
+                        <attachment title='Response' source='80416045-e3b9-4421-959e-9ac1a66f061f-attachment.json' type='application/json' size='11'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182894797' status='passed' stop='1656182894830'>
+            <name>The Footer text should be Copyright © 2021 Radium Rocket</name>
+            <title>The Footer text should be Copyright © 2021 Radium Rocket</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894798' status='passed' stop='1656182894812'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='8807821b-aa22-4666-8429-53272f94737e-attachment.json' type='application/json' size='68'/>
+                        <attachment title='Response' source='f922f200-783b-4cab-9dc5-7f0a39605f89-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894815' status='passed' stop='1656182894829'>
+                    <name>GET /session/:sessionId/element/4abdf92e-d1e3-4c9e-9e06-53f2d006b32a/text</name>
+                    <title>GET /session/:sessionId/element/4abdf92e-d1e3-4c9e-9e06-53f2d006b32a/text</title>
+                    <attachments>
+                        <attachment title='Response' source='370a7bd9-b0f1-479f-8a59-e0b38486b9e2-attachment.json' type='application/json' size='32'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182894830' status='passed' stop='1656182894871'>
+            <name>Button facebook should be clickable</name>
+            <title>Button facebook should be clickable</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894831' status='passed' stop='1656182894846'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='d42295a8-5bee-44d6-8627-2ab223018302-attachment.json' type='application/json' size='112'/>
+                        <attachment title='Response' source='de855cce-2036-44ce-8bf6-b3d247c398bc-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894849' status='passed' stop='1656182894859'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='2d045f10-fb43-4c24-9b43-e6e6b7b4f132-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='11f61010-7709-4f0f-8912-80bc25edbe88-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894859' status='passed' stop='1656182894870'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='3e10808b-f0b7-4cc7-b0e1-00e255557b65-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='01c1f0c3-16b2-4fa4-8a29-e066cdfc9e07-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182894871' status='passed' stop='1656182894915'>
+            <name>Button instagram should be clickable</name>
+            <title>Button instagram should be clickable</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894872' status='passed' stop='1656182894888'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='bb16d595-8038-4229-8673-2c4431b35d59-attachment.json' type='application/json' size='112'/>
+                        <attachment title='Response' source='07ae546e-db6c-4e54-a0b6-db1f32a21b37-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894893' status='passed' stop='1656182894904'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='ec550961-86f2-41d4-906e-8a585c207712-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='073fbb28-133c-406d-beab-3a5c68bcaac9-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894904' status='passed' stop='1656182894915'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='6899dc86-b5b3-4954-83af-d0b980234c1d-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='dd7bd42a-ebf0-4320-afea-8a6fd545c1d0-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182894921' status='passed' stop='1656182894955'>
+            <name>Button twitter should be clickable</name>
+            <title>Button twitter should be clickable</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894921' status='passed' stop='1656182894934'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='8c1a23f6-e6ed-4d7e-9931-1496ef481e0d-attachment.json' type='application/json' size='112'/>
+                        <attachment title='Response' source='05f8d6d9-9d00-4cb9-8637-baf3db135294-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894936' status='passed' stop='1656182894945'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='6df668c4-b306-435b-9877-498b5ca17d97-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='c2f25cd8-464b-4552-a7b0-99b92e37f852-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894945' status='passed' stop='1656182894955'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='6edf2fb2-7c7e-4c0b-b737-a64be76c01d8-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='a92c53b7-81fa-45d0-bf6f-122109c62940-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182894956' status='passed' stop='1656182894987'>
+            <name>Button Admin should be clickable</name>
+            <title>Button Admin should be clickable</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894956' status='passed' stop='1656182894968'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='a78c43d1-28d3-4dcf-a917-a409fa1f9c4d-attachment.json' type='application/json' size='97'/>
+                        <attachment title='Response' source='31bd62eb-cb23-40f3-99d4-cc689cba3c77-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894970' status='passed' stop='1656182894979'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='616e7197-e2e3-490d-b8eb-88037bcd178a-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='29309b0b-c859-445e-b75b-db5dba7a73f3-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182894979' status='passed' stop='1656182894987'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='198790bf-34e9-4344-b3ed-7c1ca9e08921-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='688d9ff3-4e64-4f8c-84cd-5001c3a49fca-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182894988' status='passed' stop='1656182895020'>
+            <name>Button Super Admin should be clickable</name>
+            <title>Button Super Admin should be clickable</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182894989' status='passed' stop='1656182895000'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='fc443352-0d15-4708-b108-3e90d21914e0-attachment.json' type='application/json' size='97'/>
+                        <attachment title='Response' source='7a8ba1f6-6754-4a77-a38c-a987cb8f2111-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895002' status='passed' stop='1656182895011'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='21d5d720-eb3d-4ce1-8519-de14dec2f8c4-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='bfa40070-37f3-4cd4-9798-6d1ad0301d3d-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895011' status='passed' stop='1656182895019'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='376a0cc2-bc19-41c2-8b88-ecf04eccb85c-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='4d97155d-eb9c-4626-ad20-b9066b178408-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182895020' status='passed' stop='1656182895061'>
+            <name>Button Employees should be clickable</name>
+            <title>Button Employees should be clickable</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895030' status='passed' stop='1656182895042'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='7cd65cbb-165d-4993-830c-0b2c3d1b223d-attachment.json' type='application/json' size='97'/>
+                        <attachment title='Response' source='2d05893c-556c-4b21-8991-cbe807fb2644-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895044' status='passed' stop='1656182895052'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='00cc7023-b26e-40a8-8f46-df0d5ed39fca-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='a8abd75c-4bb2-4670-ab71-3d42fe974aa1-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895052' status='passed' stop='1656182895060'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='6514357a-bb48-426f-ace4-704be2930dba-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='875a2df2-fc03-4ac0-839f-37570e6c315e-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182895061' status='passed' stop='1656182895093'>
+            <name>Button Projects should be clickable</name>
+            <title>Button Projects should be clickable</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895062' status='passed' stop='1656182895073'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='f8b0d5dd-9946-4553-a74c-8d0c148fb2e3-attachment.json' type='application/json' size='97'/>
+                        <attachment title='Response' source='1d1efd3b-e533-4e4c-bf49-0d7fc11eaad2-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895075' status='passed' stop='1656182895084'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='d14ef58f-6b92-45b5-8574-f71945ab3cfb-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='854b633d-4f21-45f1-a7da-fae5328dbe01-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895084' status='passed' stop='1656182895092'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='43c59a3e-2ee6-4a46-9214-3c4506281e6f-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='dcdf36d1-81fd-4007-9721-27c94a8044f0-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182895093' status='passed' stop='1656182895124'>
+            <name>Button Time-sheets should be clickable</name>
+            <title>Button Time-sheets should be clickable</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895094' status='passed' stop='1656182895106'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='f38e023f-91aa-4a2c-9d9d-cd0685d09e64-attachment.json' type='application/json' size='97'/>
+                        <attachment title='Response' source='d3817131-9b8c-488b-88ba-26f41c4ff407-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895107' status='passed' stop='1656182895116'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='e4af5a88-d99f-4d25-9a22-cf0cabc2a0e0-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='12984b05-46b3-4bec-a14b-5ff52d958b48-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895116' status='passed' stop='1656182895124'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='d66b7be4-cf2d-4b1a-8893-8ddcaf47a848-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='c545f725-270b-4553-8318-8517ade3281c-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182895124' status='passed' stop='1656182895158'>
+            <name>Button Tasks should be clickable</name>
+            <title>Button Tasks should be clickable</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895125' status='passed' stop='1656182895137'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='17b0de59-289b-4946-be27-e7c6f99b55fa-attachment.json' type='application/json' size='97'/>
+                        <attachment title='Response' source='86716629-cb6a-4110-a418-9ab5828a8ba1-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895139' status='passed' stop='1656182895148'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='ba123969-0d19-4b59-bbe6-dfd60d018df1-attachment.json' type='application/json' size='8337'/>
+                        <attachment title='Response' source='55acbde8-9d50-4b42-b34a-8f424c4f48ec-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895149' status='passed' stop='1656182895157'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='49846ed2-e9e6-493b-a849-b73d2c173e8b-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='b96a1ffc-c2cc-4ace-a4e3-6da58780ee08-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656182895171' status='failed' stop='1656182895265'>
+            <name>Button Twitter on click</name>
+            <title>Button Twitter on click</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895172' status='passed' stop='1656182895185'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='90897e30-81d2-471e-93e8-a69c29f1fe55-attachment.json' type='application/json' size='112'/>
+                        <attachment title='Response' source='0569f4c9-9c30-423e-b57e-80d68808cdec-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656182895188' status='passed' stop='1656182895263'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='50134bdb-d7d7-4d59-bd65-dedaad5dc630-attachment.png' type='image/png' size='30619'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: elem[prop] is not a function</message>
+                <stack-trace>TypeError: elem[prop] is not a function
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:50:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1656182895265' status='failed' stop='1656182895325'>
+            <name>Button Facebook on click</name>
+            <title>Button Facebook on click</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895265' status='passed' stop='1656182895325'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='a672b6fd-2dc3-406a-b20d-3eb8e7c95147-attachment.png' type='image/png' size='30619'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: test.open is not a function</message>
+                <stack-trace>TypeError: test.open is not a function
+                    at test.open (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\pageobjects\test.page.js:19:21)
+                    at UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:54:18)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1656182895325' status='failed' stop='1656182895389'>
+            <name>Button Instagram on click</name>
+            <title>Button Instagram on click</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895325' status='passed' stop='1656182895389'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='b9431692-360e-4150-ac11-3f70d069034e-attachment.png' type='image/png' size='30619'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: test.open is not a function</message>
+                <stack-trace>TypeError: test.open is not a function
+                    at test.open (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\pageobjects\test.page.js:19:21)
+                    at UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:59:18)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1656182895392' status='failed' stop='1656182895458'>
+            <name>Button Admin on click</name>
+            <title>Button Admin on click</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895392' status='passed' stop='1656182895458'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='e67540eb-7274-4354-aeac-a67e90869190-attachment.png' type='image/png' size='30619'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: test.open is not a function</message>
+                <stack-trace>TypeError: test.open is not a function
+                    at test.open (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\pageobjects\test.page.js:19:21)
+                    at UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:64:18)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1656182895458' status='failed' stop='1656182895518'>
+            <name>Button Super Admin on click</name>
+            <title>Button Super Admin on click</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895459' status='passed' stop='1656182895517'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='a56bd182-7716-4a59-a5e9-7e3570678131-attachment.png' type='image/png' size='30619'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: test.open is not a function</message>
+                <stack-trace>TypeError: test.open is not a function
+                    at test.open (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\pageobjects\test.page.js:19:21)
+                    at UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:69:18)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1656182895518' status='failed' stop='1656182895587'>
+            <name>Button Employees on click</name>
+            <title>Button Employees on click</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895518' status='passed' stop='1656182895587'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='6f471b7d-1c2f-4ada-8298-15d52a244a0b-attachment.png' type='image/png' size='30619'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: test.open is not a function</message>
+                <stack-trace>TypeError: test.open is not a function
+                    at test.open (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\pageobjects\test.page.js:19:21)
+                    at UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:74:18)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1656182895587' status='failed' stop='1656182895668'>
+            <name>Button Projects on click</name>
+            <title>Button Projects on click</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895597' status='passed' stop='1656182895667'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='a2464ed1-7198-431a-9666-dd5203e7a69d-attachment.png' type='image/png' size='30619'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: test.open is not a function</message>
+                <stack-trace>TypeError: test.open is not a function
+                    at test.open (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\pageobjects\test.page.js:19:21)
+                    at UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:79:18)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1656182895668' status='failed' stop='1656182895739'>
+            <name>Button Time sheets on click</name>
+            <title>Button Time sheets on click</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895668' status='passed' stop='1656182895738'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='2ec3c9a0-fa25-411d-99d5-83a9083351e2-attachment.png' type='image/png' size='30619'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: test.open is not a function</message>
+                <stack-trace>TypeError: test.open is not a function
+                    at test.open (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\pageobjects\test.page.js:19:21)
+                    at UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:84:18)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1656182895739' status='failed' stop='1656182895808'>
+            <name>Button Tasks on click</name>
+            <title>Button Tasks on click</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656182895740' status='passed' stop='1656182895808'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='85a9199d-576d-471b-ab05-5ccc3f994e1d-attachment.png' type='image/png' size='30619'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: test.open is not a function</message>
+                <stack-trace>TypeError: test.open is not a function
+                    at test.open (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\pageobjects\test.page.js:19:21)
+                    at UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:89:18)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

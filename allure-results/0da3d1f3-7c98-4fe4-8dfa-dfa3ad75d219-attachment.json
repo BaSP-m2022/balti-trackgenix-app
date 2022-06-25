@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "#root > div > header > nav > div > h1 > a"
+}

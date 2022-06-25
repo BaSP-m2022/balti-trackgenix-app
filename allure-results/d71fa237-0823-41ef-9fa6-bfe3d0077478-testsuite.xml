@@ -1,0 +1,165 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1656129943555' stop='1656129944463'>
+    <name>My Trackgenix test aplication</name>
+    <title>My Trackgenix test aplication</title>
+    <test-cases>
+        <test-case start='1656129943556' status='passed' stop='1656129943558'>
+            <name>"before all" hook</name>
+            <title>"before all" hook</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656129943558' status='undefined'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='2c8cf1f2-8d26-496a-864f-3f8f85597ed3-attachment.json' type='application/json' size='55'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656129943565' status='passed' stop='1656129944115'>
+            <name>The Header title should be Home</name>
+            <title>The Header title should be Home</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656129943569' status='passed' stop='1656129944069'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='e637b9e0-6cad-400f-84d0-2239c830257c-attachment.json' type='application/json' size='76'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656129944090' status='passed' stop='1656129944110'>
+                    <name>GET /session/:sessionId/element/4748ce0c-4d72-4289-8d82-5703bf84f1db/text</name>
+                    <title>GET /session/:sessionId/element/4748ce0c-4d72-4289-8d82-5703bf84f1db/text</title>
+                    <attachments>
+                        <attachment title='Response' source='57614ff2-4b07-4452-90cf-e9877a1cf504-attachment.json' type='application/json' size='6'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='fe23ddc1-cca5-4a34-8db8-9af75c4e9d1e-attachment.json' type='application/json' size='83'/>
+            </attachments>
+        </test-case>
+        <test-case start='1656129944116' status='passed' stop='1656129944159'>
+            <name>The Navbar title should be TRACKGENIX</name>
+            <title>The Navbar title should be TRACKGENIX</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656129944117' status='passed' stop='1656129944136'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='e7005cd0-aceb-4e8a-aba4-1d8071d55c7a-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='8d8fd5cc-4eaf-424f-bc23-65b705537842-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656129944140' status='passed' stop='1656129944158'>
+                    <name>GET /session/:sessionId/element/3284d048-7bf2-48cf-b929-8f3fdb162463/text</name>
+                    <title>GET /session/:sessionId/element/3284d048-7bf2-48cf-b929-8f3fdb162463/text</title>
+                    <attachments>
+                        <attachment title='Response' source='7ff396da-fbe8-406a-82f3-90aef9e53f79-attachment.json' type='application/json' size='12'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1656129944159' status='failed' stop='1656129944415'>
+            <name>The Sidebar title should be Shorcuts</name>
+            <title>The Sidebar title should be Shorcuts</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656129944160' status='failed' stop='1656129944414'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='131dd0c4-d00e-47c9-8557-a0d3e81f34e5-attachment.json' type='application/json' size='84'/>
+                    </attachments>
+                    <steps>
+                        <step start='1656129944226' status='passed' stop='1656129944412'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='a9c60209-9f48-4054-af4a-00101fd0de23-attachment.png' type='image/png' size='30460'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>invalid selector: The selector "#root > div > div > aside > nav > span);" used with strategy "css selector" is invalid! For more information on selectors visit the WebdriverIO docs at: https://webdriver.io/docs/selectors</message>
+                <stack-trace>invalid selector: The selector "#root > div > div > aside > nav > span);" used with strategy "css selector" is invalid! For more information on selectors visit the WebdriverIO docs at: https://webdriver.io/docs/selectors
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async UserContext.&lt;anonymous> (C:\Users\matos\OneDrive\Escritorio\balti-trackgenix-app\balti-trackgenix-app\test\specs\webtest.e2e.js:15:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1656129944425' status='passed' stop='1656129944462'>
+            <name>The Footer text should be Copyright © 2021 Radium Rocket</name>
+            <title>The Footer text should be Copyright © 2021 Radium Rocket</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-103.0.5060.53'/>
+            </parameters>
+            <steps>
+                <step start='1656129944426' status='passed' stop='1656129944442'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='57591d01-4468-4859-98bc-4bcbcf9d3bd4-attachment.json' type='application/json' size='68'/>
+                        <attachment title='Response' source='0eb95af5-f779-49b8-8a16-d8e12d9739ed-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1656129944445' status='passed' stop='1656129944461'>
+                    <name>GET /session/:sessionId/element/743aabda-e0bf-4c00-a501-c9bf1b59ee4f/text</name>
+                    <title>GET /session/:sessionId/element/743aabda-e0bf-4c00-a501-c9bf1b59ee4f/text</title>
+                    <attachments>
+                        <attachment title='Response' source='2a26061e-a1b7-42e4-b2d7-ad4cc1148137-attachment.json' type='application/json' size='32'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
