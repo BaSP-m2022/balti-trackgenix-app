@@ -10,7 +10,9 @@
   },
   "eslint.format.enable": true,
   "cSpell.words": [
+    "aplication",
     "appium",
+    "balti",
     "browserslist",
     "browserstack",
     "btns",
@@ -22,6 +24,7 @@
     "initialise",
     "initialising",
     "Micheletti",
+    "pageobjects",
     "redbtn",
     "Rendo",
     "specfile",
