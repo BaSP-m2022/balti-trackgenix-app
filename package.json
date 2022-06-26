@@ -25,6 +25,7 @@
   },
   "scripts": {
     "allure-report": "allure generate --clean allure-results && allure open",
+    "test": "npx wdio run ./wdio.conf.js --spec",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint .",
