@@ -73,4 +73,4 @@ class Header {
   }
 }
 
-export default new Header();
+module.exports = new Header();

@@ -1,32 +1,32 @@
-import Header from '../pageobjects/header';
-import Sidebar from '../pageobjects/sidebar';
-import Footer from '../pageobjects/footer';
+const Header = require('../pageobjects/header');
+const Sidebar = require('../pageobjects/sidebar');
+const Footer = require('../pageobjects/footer');
 
 describe('Admin CRUD path testing', () => {
-    beforeAll('Open browser', ()=> {
-        browser.url('https://balti-trackgenix-app.vercel.app/');
-    });
+  beforeAll('Open browser', () => {
+    browser.url('https://balti-trackgenix-app.vercel.app/');
+  });
 
-    it('Header should be displayed and interactive', async () => {
-        await Header.wholeHeaderDisplay();
-    });
+  it('Header should be displayed and interactive', async () => {
+    await Header.wholeHeaderDisplay();
+  });
 
-    it('TG logo in the header should redirect to homepage', async () => {
-        await Header.TGredirection();
-    });
+  it('TG logo in the header should redirect to homepage', async () => {
+    await Header.TGredirection();
+  });
 
-    it('Footer should be displayed and interactive', async () => {
-        await Footer.wholeFooterDisplay();
-    });
+  it('Footer should be displayed and interactive', async () => {
+    await Footer.wholeFooterDisplay();
+  });
 
-    it('Sidebar should be displayed and interactive', async () => {
-        await Sidebar.wholeSidebarDisplay();
-    });
+  it('Sidebar should be displayed and interactive', async () => {
+    await Sidebar.wholeSidebarDisplay();
+  });
 
-    it('Title: Admins should be displayed', async () => {
-        await expect(Header.admins).toBeDisplayed();
-        Header.admins.click();
-        //await expect(SuperAdminHomePage.saTitle).toBeDisplayed();
-        //await expect(SuperAdminHomePage.saTitle).toHaveText('Super Admins');
-    });
+  it('Title: Admins should be displayed', async () => {
+    await expect(Header.admins).toBeDisplayed();
+    Header.admins.click();
+    //await expect(SuperAdminHomePage.saTitle).toBeDisplayed();
+    //await expect(SuperAdminHomePage.saTitle).toHaveText('Super Admins');
+  });
 });

@@ -55,4 +55,4 @@ class SuperAdminForm {
   }
 }
 
-export default new SuperAdminForm();
+module.exports = new SuperAdminForm();

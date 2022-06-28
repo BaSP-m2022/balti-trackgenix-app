@@ -37,4 +37,4 @@ class Footer {
   }
 }
 
-export default new Footer();
+module.exports = new Footer();

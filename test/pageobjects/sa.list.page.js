@@ -72,4 +72,4 @@ class SuperAdminHomePage {
   }
 }
 
-export default new SuperAdminHomePage();
+module.exports = new SuperAdminHomePage();

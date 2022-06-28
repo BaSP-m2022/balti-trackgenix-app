@@ -67,4 +67,4 @@ class Sidebar {
   }
 }
 
-export default new Sidebar();
+module.exports = new Sidebar();

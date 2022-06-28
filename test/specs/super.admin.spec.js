@@ -1,6 +1,7 @@
-import Header from '../pageobjects/header';
-import Sidebar from '../pageobjects/sidebar';
-import Footer from '../pageobjects/footer';
+const Header = require('../pageobjects/header');
+const Sidebar = require('../pageobjects/sidebar');
+const Footer = require('../pageobjects/footer');
+const SuperAdminHomePage = require('../pageobjects/sa.list.page');
 
 describe('Super Admins CRUD path testing', () => {
     beforeAll('Open browser', ()=> {
