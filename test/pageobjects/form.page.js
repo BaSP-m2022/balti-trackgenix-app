@@ -1,5 +1,5 @@
-class SuperAdminForm {
-  get saTitle() {
+class Form {
+  get title() {
     return $(' #root > div > div > section > h2');
   }
   get form() {
@@ -57,13 +57,12 @@ class SuperAdminForm {
   async setPassword(password) {
     await this.passwordInput.setValue(password);
   }
-  async newSa(name, surname, email, password) {
+  async newItem(name, surname, email, password) {
     await this.setName(name);
     await this.setSurname(surname);
     await this.setEmail(email);
     await this.setPassword(password);
     await this.statusCheckboxBtn.click();
-    await this.saveBtn.click();
   }
   async errorInputsMsgs() {
     await this.saveBtn.click();
@@ -78,4 +77,4 @@ class SuperAdminForm {
   }
 }
 
-module.exports = new SuperAdminForm();
+module.exports = new Form();

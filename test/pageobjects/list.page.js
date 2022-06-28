@@ -1,5 +1,5 @@
 class SuperAdminHomePage {
-  get saTitle() {
+  get listTitle() {
       return $(' #root > div > div > section > h2');
   }
   get listTable() {

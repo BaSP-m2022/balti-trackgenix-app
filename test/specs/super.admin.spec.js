@@ -3,6 +3,7 @@ const Sidebar = require('../pageobjects/sidebar');
 const Footer = require('../pageobjects/footer');
 const ListPage = require('../pageobjects/list.page');
 const FormPage = require('../pageobjects/form.page');
+const SuperAdmin = require('../pageobjects/super.admin.page');
 
 describe('Super Admins CRUD path testing', () => {
   beforeAll('Open browser', () => {
@@ -28,8 +29,8 @@ describe('Super Admins CRUD path testing', () => {
   it('Title: Super Admins should be displayed', async () => {
     await expect(Header.superAdmins).toBeDisplayed();
     Header.superAdmins.click();
-    await expect(ListPage.saTitle).toBeDisplayed();
-    await expect(ListPage.saTitle).toHaveText('Super Admins');
+    await expect(ListPage.listTitle).toBeDisplayed();
+    await expect(ListPage.listTitle).toHaveText('Super Admins');
   });
 
   it('List table should be displayed', async () => {
@@ -54,8 +55,8 @@ describe('Super Admins CRUD path testing', () => {
   });
 
   it('Title in the tab to create a new SA should be displayed', async () => {
-    await expect(FormPage.saTitle).toBeDisplayed();
-    await expect(FormPage.saTitle).toHaveText('Super Admins');
+    await expect(FormPage.title).toBeDisplayed();
+    await expect(FormPage.title).toHaveText('Super Admins');
   });
 
   it('Form to create a new SA should be displayed', async () => {
@@ -76,30 +77,50 @@ describe('Super Admins CRUD path testing', () => {
   });
 
   it('A new Super Admin should be created', async () => {
-      await expect(ListPage.createSaBtn).toBeDisplayed();
-      await expect(ListPage.createSaBtn).toBeClickable();
-      await ListPage.createSaBtn.click();
-      await FormPage.newSa('Evelyn', 'Heredia', 'evefhrd@hotmail.com', '12345678p');
-    });
+    await expect(ListPage.createSaBtn).toBeDisplayed();
+    await expect(ListPage.createSaBtn).toBeClickable();
+    await ListPage.createSaBtn.click();
+    await SuperAdmin.newSuperAdmin('Evelyn', 'Heredia', 'evefhrd@hotmail.com', '12345678p');
+  });
 
-//This path should be followed when master will be updated
-/*
+  //This path should be followed when master will be updated
+  /*
   it('Success message should be displayed', async () => {
       await expect(saFormPage.saCreatedModal).toBeDisplayed();
       await expect(saFormPage.saCreatedModal).toHaveText('');
   });
 */
   it('OK button should close success message.', async () => {
-      await expect(FormPage.modalOkBtn).toBeDisplayed();
-      await expect(FormPage.modalOkBtn).toHaveText('OK');
-      await expect(FormPage.modalOkBtn).toBeClickable();
-      await FormPage.modalOkBtn.click();
+    await expect(FormPage.modalOkBtn).toBeDisplayed();
+    await expect(FormPage.modalOkBtn).toHaveText('OK');
+    await expect(FormPage.modalOkBtn).toBeClickable();
+    await FormPage.modalOkBtn.click();
+  });
+
+  it('Super Admin should not be edited', async () => {
+    await expect(ListPage.editBtn).toBeDisplayed();
+    await expect(ListPage.editBtn).toBeClickable();
+    await ListPage.editBtn.click();
+    await expect(FormPage.backBtn).toBeDisplayed();
+    await expect(FormPage.backBtn).toBeClickable();
+    await FormPage.backBtn.click();
+    await expect(browser).toHaveUrl('https://balti-trackgenix-app.vercel.app/super-admins');
+  });
+
+  it('Super Admin should be edited', async () => {
+    await expect(ListPage.editBtn).toBeDisplayed();
+    await expect(ListPage.editBtn).toBeClickable();
+    await ListPage.editBtn.click();
+    await SuperAdmin.newSuperAdmin('Evelyn', 'Updated', 'evefhrd@hotmail.com', '12345678p');
+    await expect(FormPage.modalOkBtn).toBeDisplayed();
+    await expect(FormPage.modalOkBtn).toBeClickable();
+    await FormPage.modalOkBtn.click();
   });
 
   it('Super Admin should not be deleted', async () => {
     await ListPage.deleteCancelFunction();
   });
-/* Delete an item
+  /* Delete an item
   it('Super Admin should be deleted', async () => {
       await ListPage.deleteAcceptFunction();
   });
@@ -116,23 +137,4 @@ describe('Super Admins CRUD path testing', () => {
       await ListPage.modalSuccessDelete.click();
   });
 */
-  it('Super Admin should not be edited', async () => {
-    await expect(ListPage.editBtn).toBeDisplayed();
-    await expect(ListPage.editBtn).toBeClickable();
-    await ListPage.editBtn.click();
-    await expect(FormPage.backBtn).toBeDisplayed();
-    await expect(FormPage.backBtn).toBeClickable();
-    await FormPage.backBtn.click();
-    await expect(browser).toHaveUrl('https://balti-trackgenix-app.vercel.app/super-admins');
-  });
-
-  it('Super Admin should be edited', async () => {
-    await expect(ListPage.editBtn).toBeDisplayed();
-    await expect(ListPage.editBtn).toBeClickable();
-    await ListPage.editBtn.click();
-    await FormPage.newSa('Evelyn', 'Updated', 'evefhrd@hotmail.com', '12345678p');
-    await expect(FormPage.modalOkBtn).toBeDisplayed();
-    await expect(FormPage.modalOkBtn).toBeClickable();
-    await FormPage.modalOkBtn.click();
-  });
 });
