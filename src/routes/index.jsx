@@ -1,7 +1,9 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Layout from 'Components/Layout';
 import Loading from 'Components/Shared/Loading';
+
+/*
 const Admins = lazy(() => import('Components/Admins/List'));
 const AdminsForm = lazy(() => import('Components/Admins/Form'));
 const SuperAdmins = lazy(() => import('Components/SuperAdmins/List'));
@@ -18,7 +20,11 @@ const TimeSheetsForm = lazy(() => import('Components/TimeSheets/Form'));
 const EmployeeProjects = lazy(() => import('Components/Employee/MyProjects'));
 const EmployeeProfile = lazy(() => import('Components/Employee/UserProfile/index'));
 const EmployeeHome = lazy(() => import('Components/Employee/Home'));
-const EmployeeWorkedHours = lazy(() => import('Components/Employee/WorkedHours'));
+const EmployeeWorkedHours = lazy(() => import('Components/Employee/WorkedHours'));*/
+
+const AdminRoutes = lazy(() => import('Routes/admin'));
+const EmployeeRoutes = lazy(() => import('Routes/employee'));
+const AuthRoutes = lazy(() => import('Routes/auth'));
 
 const Routes = () => {
   return (
