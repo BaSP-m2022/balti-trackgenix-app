@@ -47,7 +47,8 @@ class SuperAdminHomePage {
   async deleteCancelFunction () {
       await this.deleteBtn.click();
       await expect(this.deleteModalQuestion).toBeDisplayed();
-      await expect(this.deleteModalQuestion).toBeHaveText('Are you sure you want to delete this super admin?');
+    await expect(this.deleteModalQuestion).toHaveTextContaining(
+      'Are you sure you want to delete this super admin?');
       await expect(this.deleteModalCancelBtn).toBeDisplayed();
       await this.deleteModalCancelBtn.click();
   }

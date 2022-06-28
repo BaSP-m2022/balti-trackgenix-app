@@ -70,29 +70,13 @@ describe('Super Admins CRUD path testing', () => {
   });
 
   it('A new Super Admin should NOT be created', async () => {
-    await expect(SuperAdminHomePage.createSaBtn).toBeDisplayed();
-    await expect(SuperAdminHomePage.createSaBtn).toBeClickable();
     await SuperAdminHomePage.createSaBtn.click();
-    await SuperAdminForm.errorInputsMsgs();
-    await expect(SuperAdminForm.backBtn).toBeDisplayed();
-    await expect(SuperAdminForm.backBtn).toBeClickable();
+    await expect(browser).toHaveUrl('https://balti-trackgenix-app.vercel.app/super-admins/form');
+    await SuperAdminForm.errorInputsMsgs;
     await SuperAdminForm.backBtn.click();
-});
+  });
 
-/*
-it('buscar un nombre', async () => {
-    await expect(Header.superAdmins).toBeDisplayed();
-    Header.superAdmins.click();
-    await expect(SuperAdminHomePage.saTitle).toBeDisplayed();
-    await expect(SuperAdminHomePage.saTitle).toHaveText('Super Admins');
-    await expect(SuperAdminHomePage.listTable).toBeDisplayed();
-    const name = await SuperAdminHomePage.listTable.toHaveTextContaining('Felipe');
-    //const row = await name.getAttribute('tr');
-    //console.log(row);
-
-   // #root > div > div > section > div.list_container__21Buw > table > tbody > tr:nth-child(3) > td:nth-child(1)
-});
-
+  /* This tests were comented as the super admin form has been modified by devs
 it('A new Super Admin should be created', async () => {
     await expect(SuperAdminHomePage.createSaBtn).toBeDisplayed();
     await expect(SuperAdminHomePage.createSaBtn).toBeClickable();
@@ -113,9 +97,8 @@ it('OK button should close success message.', async () => {
 });
 */
 it('Super Admin should not be deleted', async () => {
-    await SuperAdminHomePage.deleteCancelFunction();
+  await SuperAdminHomePage.deleteCancelFunction();
 });
-
 /*
 it('Super Admin should be deleted', async () => {
     await SuperAdminHomePage.deleteAcceptFunction();
