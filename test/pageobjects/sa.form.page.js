@@ -26,6 +26,18 @@ class SuperAdminForm {
   get saveBtn() {
       return $('.super-admins_buttonContainer__2-O00 > button:nth-child(2)');
   }
+  get nameInputError() {
+      return $('#root > div > div > section > form > div:nth-child(1) > p');
+  }
+  get surnameInputError() {
+      return $('#root > div > div > section > form > div:nth-child(2) > p');
+  }
+  get emailInputError() {
+      return $('#root > div > div > section > form > div:nth-child(3) > p');
+  }
+  get passwordInputError() {
+      return $('#root > div > div > section > form > div:nth-child(4) > p');
+  }
   get saCreatedModal() {
       return $('#root > div > div > section > div > div');
   }
@@ -52,6 +64,16 @@ class SuperAdminForm {
       await this.setPassword(password);
       await this.statusCheckboxBtn.click();
       await this.saveBtn.click();
+  }
+  async errorInputsMsgs () {
+      await this.nameInputError.toBeDisplayed();
+      await this.nameInputError.toHaveText('First Name cannot be empty');
+      await this.surnameInputError.toBeDisplayed();
+      await this.surnameInputError.toHaveText('Last Name cannot be empty');
+      await this.emailInputError.toBeDisplayed();
+      await this.emailInputError.toHaveText('Email cannot be empty');
+      await this.passwordInputError.toBeDisplayed();
+      await this.passwordInputError.toHaveText('Password cannot be empty');
   }
 }
 

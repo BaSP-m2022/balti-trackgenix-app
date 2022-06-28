@@ -13,19 +13,7 @@ class SuperAdminHomePage {
   }
   get createSaBtn() {
       return $('#root > div > div > section > div:nth-child(3) > a > button');
-  }/*
-  get nameListItem() {
-      return $('.list_container__21Buw > table > tbody > tr:nth-child(1) > td:nth-child(1)');
   }
-  get surnameListItem() {
-      return $('.list_container__21Buw > table > tbody > tr:nth-child(1) > td:nth-child(2)');
-  }
-  get mailListItem() {
-      return $('.list_container__21Buw > table > tbody > tr:nth-child(1) > td:nth-child(3)');
-  }
-  get statusListItem() {
-      return $('.list_container__21Buw > table > tbody > tr:nth-child(1) > td:nth-child(4)');
-  }*/
   get editBtn() {
       return $('.list_container__21Buw > table > tbody > tr:nth-child(1) > td:nth-child(5) > a > button');
   }
