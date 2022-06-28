@@ -1,7 +1,7 @@
 import {
-  GET_SUPER_ADMIN_SUCCESS,
-  GET_SUPER_ADMIN_PENDING,
-  GET_SUPER_ADMIN_ERROR,
+  GET_SUPER_ADMINS_SUCCESS,
+  GET_SUPER_ADMINS_PENDING,
+  GET_SUPER_ADMINS_ERROR,
   GET_SINGLE_SUPER_ADMIN_SUCCESS,
   GET_SINGLE_SUPER_ADMIN_PENDING,
   GET_SINGLE_SUPER_ADMIN_ERROR,
@@ -15,8 +15,6 @@ import {
   EDIT_SUPER_ADMIN_PENDING,
   EDIT_SUPER_ADMIN_ERROR,
   SUPER_ADMIN_MODAL,
-  SUPER_ADMIN_MESSAGE,
-  UPDATE_LIST,
   RESET_MESSAGE,
   RESET_SUPER_ADMIN
 } from './constants';
@@ -31,29 +29,34 @@ const initialState = {
 
 export const superAdminsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_SUPER_ADMIN_PENDING:
+    case GET_SUPER_ADMINS_PENDING:
       return {
         ...state,
         isLoading: true
       };
-    case GET_SUPER_ADMIN_SUCCESS:
+    case GET_SUPER_ADMINS_SUCCESS:
       return {
         ...state,
         list: action.payload,
         isLoading: false
       };
-    case GET_SUPER_ADMIN_ERROR:
+    case GET_SUPER_ADMINS_ERROR:
       return {
         ...state,
         message: action.payload,
         isLoading: false,
-        error: true,
-        modal: true
+        error: true
       };
     case GET_SINGLE_SUPER_ADMIN_SUCCESS:
       return {
         ...state,
-        superAdmin: action.payload.data,
+        superAdmin: {
+          firstName: action.payload.data.firstName,
+          lastName: action.payload.data.lastName,
+          email: action.payload.data.email,
+          password: action.payload.data.password,
+          isActive: action.payload.data.isActive
+        },
         isLoading: false,
         message: action.payload.message,
         error: false
@@ -73,8 +76,9 @@ export const superAdminsReducer = (state = initialState, action) => {
     case DELETE_SUPER_ADMIN_SUCCESS:
       return {
         ...state,
-        message: action.payload,
+        message: 'Super Admin deleted',
         isLoading: false,
+        list: state.list.filter((superAdmin) => superAdmin._id !== action.payload),
         showModal: true,
         error: false
       };
@@ -88,7 +92,8 @@ export const superAdminsReducer = (state = initialState, action) => {
         ...state,
         message: action.payload.message,
         isLoading: false,
-        error: true
+        error: true,
+        list: action.payload
       };
     case ADD_SUPER_ADMIN_SUCCESS:
       return {
@@ -109,8 +114,7 @@ export const superAdminsReducer = (state = initialState, action) => {
         ...state,
         message: action.payload,
         isLoading: false,
-        error: true,
-        modal: true
+        error: true
       };
     case EDIT_SUPER_ADMIN_SUCCESS:
       return {
@@ -131,23 +135,12 @@ export const superAdminsReducer = (state = initialState, action) => {
         ...state,
         message: action.payload,
         isLoading: false,
-        error: true,
-        modal: true
+        error: true
       };
     case SUPER_ADMIN_MODAL:
       return {
         ...state,
         showModal: action.payload
-      };
-    case SUPER_ADMIN_MESSAGE:
-      return {
-        ...state,
-        message: ''
-      };
-    case UPDATE_LIST:
-      return {
-        ...state,
-        list: action.payload
       };
     case RESET_MESSAGE:
       return {

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { getTasks, deleteTask } from '../../../redux/Task/thunks';
-import { resetMessage, setModal, updateList } from '../../../redux/Task/actions';
+import { getTasks, deleteTask } from '../../../redux/tasks/thunks';
+import { resetMessage, setModal } from '../../../redux/tasks/actions';
 import List from '../../Shared/List';
 import Button from '../../Shared/Button';
 import Loading from '../../Shared/Loading';
@@ -14,7 +14,6 @@ function Tasks() {
   const list = useSelector((state) => state.tasks.list);
   const isLoading = useSelector((state) => state.tasks.isLoading);
   const message = useSelector((state) => state.tasks.message);
-  const error = useSelector((state) => state.tasks.error);
   const showModal = useSelector((state) => state.tasks.showModal);
   const [confirmation, setConfirmation] = useState(true);
   const [id, setId] = useState('');
@@ -37,7 +36,7 @@ function Tasks() {
         project: task.projectId ? task.projectId.projectName : '',
         title: task.title,
         description: task.description,
-        date: task.date.slice(0, 10),
+        date: task.date?.slice(0, 10),
         done: task.done.toString()
       };
     });
@@ -47,7 +46,6 @@ function Tasks() {
   const confirmationHandler = () => {
     setConfirmation(false);
     dispatch(deleteTask(id));
-    !error && dispatch(updateList([...list.filter((task) => task._id !== id)]));
   };
 
   const closeHandler = () => {

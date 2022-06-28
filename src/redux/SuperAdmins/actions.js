@@ -1,7 +1,7 @@
 import {
-  GET_SUPER_ADMIN_SUCCESS,
-  GET_SUPER_ADMIN_PENDING,
-  GET_SUPER_ADMIN_ERROR,
+  GET_SUPER_ADMINS_SUCCESS,
+  GET_SUPER_ADMINS_PENDING,
+  GET_SUPER_ADMINS_ERROR,
   GET_SINGLE_SUPER_ADMIN_SUCCESS,
   GET_SINGLE_SUPER_ADMIN_PENDING,
   GET_SINGLE_SUPER_ADMIN_ERROR,
@@ -15,28 +15,26 @@ import {
   EDIT_SUPER_ADMIN_PENDING,
   EDIT_SUPER_ADMIN_ERROR,
   SUPER_ADMIN_MODAL,
-  SUPER_ADMIN_MESSAGE,
-  UPDATE_LIST,
   RESET_MESSAGE,
   RESET_SUPER_ADMIN
 } from './constants';
 
-export const getSuperAdminSuccess = (superAdmins) => ({
-  type: GET_SUPER_ADMIN_SUCCESS,
-  payload: superAdmins
+export const getSuperAdminsSuccess = (data) => ({
+  type: GET_SUPER_ADMINS_SUCCESS,
+  payload: data
 });
 
-export const getSuperAdminPending = () => ({
-  type: GET_SUPER_ADMIN_PENDING
+export const getSuperAdminsPending = () => ({
+  type: GET_SUPER_ADMINS_PENDING
 });
 
-export const getSuperAdminError = (error) => ({
-  type: GET_SUPER_ADMIN_ERROR,
+export const getSuperAdminsError = (error) => ({
+  type: GET_SUPER_ADMINS_ERROR,
   payload: error
 });
-export const getSingleSuperAdminSuccess = (body) => ({
+export const getSingleSuperAdminSuccess = (id) => ({
   type: GET_SINGLE_SUPER_ADMIN_SUCCESS,
-  payload: body
+  payload: id
 });
 
 export const getSingleSuperAdminPending = () => ({
@@ -62,9 +60,9 @@ export const deleteSuperAdminError = (error) => ({
   payload: error
 });
 
-export const addSuperAdminSuccess = (superAdmins) => ({
+export const addSuperAdminSuccess = (data) => ({
   type: ADD_SUPER_ADMIN_SUCCESS,
-  payload: superAdmins
+  payload: data
 });
 
 export const addSuperAdminPending = () => ({
@@ -76,9 +74,9 @@ export const addSuperAdminError = (error) => ({
   payload: error
 });
 
-export const editSuperAdminSuccess = (superAdmins) => ({
+export const editSuperAdminSuccess = (data) => ({
   type: EDIT_SUPER_ADMIN_SUCCESS,
-  payload: superAdmins
+  payload: data
 });
 
 export const editSuperAdminPending = () => ({
@@ -93,15 +91,6 @@ export const editSuperAdminError = (error) => ({
 export const superAdminModal = (state) => ({
   type: SUPER_ADMIN_MODAL,
   payload: state
-});
-
-export const superAdminMessage = () => ({
-  type: SUPER_ADMIN_MESSAGE
-});
-
-export const updateList = (newList) => ({
-  type: UPDATE_LIST,
-  payload: newList
 });
 
 export const resetMessage = () => ({

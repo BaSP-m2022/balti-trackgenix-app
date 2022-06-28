@@ -5,12 +5,12 @@ import {
   getSingleTaskPending,
   getSingleTaskSuccess,
   getSingleTaskFailed,
-  createTaskPending,
-  createTaskSuccess,
-  createTaskFailed,
-  updateTaskPending,
-  updateTaskSuccess,
-  updateTaskFailed,
+  addTaskPending,
+  addTaskSuccess,
+  addTaskFailed,
+  editTaskPending,
+  editTaskSuccess,
+  editTaskFailed,
   deleteTaskPending,
   deleteTaskSuccess,
   deleteTaskFailed,
@@ -50,7 +50,7 @@ export const getSingleTask = (id) => {
   };
 };
 
-export const createTask = (object) => {
+export const addTask = (object) => {
   return async (dispatch) => {
     try {
       const requestConfig = {
@@ -59,21 +59,21 @@ export const createTask = (object) => {
         body: JSON.stringify(object)
       };
 
-      dispatch(createTaskPending());
+      dispatch(addTaskPending());
       const response = await fetch(`${url}`, requestConfig);
       const data = await response.json();
 
       if (!data.error) {
-        dispatch(createTaskSuccess(data));
+        dispatch(addTaskSuccess(data));
         dispatch(resetTask());
-      } else dispatch(createTaskFailed(data.message));
+      } else dispatch(addTaskFailed(data.message));
     } catch (error) {
-      dispatch(createTaskFailed(error));
+      dispatch(addTaskFailed(error));
     }
   };
 };
 
-export const updateTask = (object, id) => {
+export const editTask = (object, id) => {
   return async (dispatch) => {
     try {
       const requestConfig = {
@@ -83,16 +83,16 @@ export const updateTask = (object, id) => {
       };
 
       dispatch(resetMessage());
-      dispatch(updateTaskPending());
+      dispatch(editTaskPending());
       const response = await fetch(`${url}/${id}`, requestConfig);
       const data = await response.json();
 
       if (!data.error) {
-        dispatch(updateTaskSuccess(data));
+        dispatch(editTaskSuccess(data));
         dispatch(resetTask());
-      } else dispatch(updateTaskFailed(data.message));
+      } else dispatch(editTaskFailed(data.message));
     } catch (error) {
-      dispatch(createTaskFailed(error));
+      dispatch(editTaskFailed(error));
     }
   };
 };
@@ -111,7 +111,7 @@ export const deleteTask = (id) => {
       const response = await fetch(`${url}/${id}`, requestConfig);
       const data = await response.json();
 
-      if (!data.error) dispatch(deleteTaskSuccess(data.message));
+      if (!data.error) dispatch(deleteTaskSuccess(id));
       else dispatch(deleteTaskFailed(data.message));
     } catch (error) {
       dispatch(deleteTaskFailed(error));

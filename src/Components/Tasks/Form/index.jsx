@@ -1,51 +1,51 @@
 import joi from 'joi';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
-import { getSingleTask, createTask, updateTask } from 'redux/Task/thunks';
+import { getSingleTask, addTask, editTask } from 'redux/tasks/thunks';
 import { getProjects } from 'redux/projects/thunks';
 import { getEmployees } from 'redux/employees/thunks';
-import { resetTask, resetMessage, setModal } from 'redux/Task/actions';
+import { resetTask, resetMessage, setModal } from 'redux/tasks/actions';
 import Input from 'Components/Shared/Input';
 import Select from 'Components/Shared/Select';
 import Button from 'Components/Shared/Button';
 import Modal from 'Components/Shared/Modal/Modal';
 import Loading from 'Components/Shared/Loading';
 import styles from 'Components/Tasks/Form/tasks.module.css';
+import { waitForDomChange } from '@testing-library/react';
 
 function Tasks() {
   const { id } = useParams();
   const { goBack } = useHistory();
   const dispatch = useDispatch();
-  const [employees, setEmployees] = useState([]);
-  const [projects, setProjects] = useState([]);
   const task = useSelector((state) => state.tasks.task);
-  const isLoading = useSelector((state) => state.tasks.isLoading);
   const fetchError = useSelector((state) => state.tasks.error);
   const message = useSelector((state) => state.tasks.message);
   const showModal = useSelector((state) => state.tasks.showModal);
   const employeeList = useSelector((state) => state.employees.list);
-  const employeesLoading = useSelector((state) => state.employees.isLoading);
   const projectList = useSelector((state) => state.projects.list);
+  const isLoading = useSelector((state) => state.tasks.isLoading);
+  const employeesLoading = useSelector((state) => state.employees.isLoading);
   const projectsLoading = useSelector((state) => state.projects.isLoading);
 
   const validationSchema = joi.object({
-    employeeId: joi.string(),
-    projectId: joi.string().required(),
-    title: joi.string().max(30).required(),
-    description: joi.string().max(100),
-    date: joi.date(),
-    done: joi.boolean().required()
+    employeeId: joi.string().allow('').label('Employee ID'),
+    projectId: joi.string().required().label('Project ID'),
+    title: joi.string().max(30).required().label('Title'),
+    description: joi.string().max(100).allow('').label('Description'),
+    date: joi.date().allow('').label('Date'),
+    done: joi.boolean().required().label('Done')
   });
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset
   } = useForm({
-    reValidateMode: 'onBlur',
+    mode: 'onBlur',
     resolver: joiResolver(validationSchema),
     defaultValues: {
       employeeId: '',
@@ -64,9 +64,6 @@ function Tasks() {
     return () => dispatch(resetTask());
   }, []);
 
-  useEffect(() => formatProjects(), [projectList]);
-  useEffect(() => formatEmployees(), [employeeList]);
-
   useEffect(() => {
     task &&
       reset({
@@ -74,28 +71,20 @@ function Tasks() {
         projectId: task.projectId?._id,
         title: task.title,
         description: task.description,
-        date: task.date.substring(0, 10),
+        date: task.date?.substring(0, 10),
         done: task.done
       });
   }, [task]);
 
   const formatProjects = () => {
-    let formattedProjects = [];
-    projectList.forEach((project) =>
-      formattedProjects.push({ id: project._id, text: project.projectName })
-    );
-    return formattedProjects;
-  };
-
-  const formatEmployees = () => {
-    let formattedEmployees = [];
-    employeeList.forEach((employee) => {
-      formattedEmployees.push({
-        id: employee._id,
-        text: `${employee.firstName} ${employee.lastName}`
-      });
+    return projectList.map((project) => {
+      return { id: project._id, text: project.projectName };
     });
-    return formattedEmployees;
+  };
+  const formatEmployees = () => {
+    return employeeList.map((employee) => {
+      return { id: employee._id, text: `${employee.firstName} ${employee.lastName}` };
+    });
   };
 
   const closeHandler = () => {
@@ -106,9 +95,10 @@ function Tasks() {
     }
   };
 
-  // === Handle submit data and method === //
   const submitHandler = (data) => {
-    id ? dispatch(updateTask(data, id)) : dispatch(createTask(data));
+    console.log(data);
+    if (data.employeeId === '') data.employeeId = undefined;
+    id ? dispatch(editTask(data, id)) : dispatch(addTask(data));
     dispatch(setModal(true));
   };
 
@@ -123,44 +113,26 @@ function Tasks() {
             text="Employee"
             id="employeeId"
             options={formatEmployees()}
-            error={errors.employeeId?.message}
+            error={errors.employeeId}
             register={register}
           />
           <Select
             text="Project"
             id="projectId"
             options={formatProjects()}
-            error={errors.projectId?.message}
+            error={errors.projectId}
             register={register}
           />
-          <Input
-            type="text"
-            id="title"
-            text="Title"
-            error={errors.title?.message}
-            register={register}
-          />
+          <Input type="text" id="title" text="Title" error={errors.title} register={register} />
           <Input
             type="text"
             id="description"
             text="Description"
-            error={errors.description?.message}
+            error={errors.description}
             register={register}
           />
-          <Input
-            type="date"
-            id="date"
-            text="Date"
-            error={errors.date?.message}
-            register={register}
-          />
-          <Input
-            type="checkbox"
-            id="done"
-            text="Done"
-            error={errors.done?.message}
-            register={register}
-          />
+          <Input type="date" id="date" text="Date" error={errors.date} register={register} />
+          <Input type="checkbox" id="done" text="Done" error={errors.done} register={register} />
           <div className={styles.btnsContainer}>
             <Button classes={'red'} onClick={() => goBack()}>
               Back
