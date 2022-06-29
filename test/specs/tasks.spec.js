@@ -1,6 +1,7 @@
 const Header = require('../pageobjects/header');
 const Sidebar = require('../pageobjects/sidebar');
 const Footer = require('../pageobjects/footer');
+const ListPage = require('../pageobjects/list.page');
 
 describe('Tasks CRUD path testing', () => {
     beforeAll('Open browser', ()=> {
@@ -26,7 +27,7 @@ describe('Tasks CRUD path testing', () => {
     it('Title: Tasks should be displayed', async () => {
         await expect(Header.tasks).toBeDisplayed();
         Header.tasks.click();
-        //await expect(SuperAdminHomePage.saTitle).toBeDisplayed();
-        //await expect(SuperAdminHomePage.saTitle).toHaveText('Super Admins');
+        await expect(ListPage.title).toBeDisplayed();
+        await expect(ListPage.title).toHaveText('Tasks');
     });
 });
