@@ -46,16 +46,16 @@ class SuperAdminsForm {
   }
   get backbtn() {
     return $(
-      '#root > div > div > section > form > div.admins_btnsContainer__15-dM > button.Button_btn__3cUFC.Button_redBtn__z6CdP'
+      '#root > div > div > section > form > div.super-admins_buttonContainer__2-O00 > button.Button_btn__3cUFC.Button_redBtn__z6CdP'
     );
   }
   get saveBtn() {
     return $(
-      '#root > div > div > section > form > div.admins_btnsContainer__15-dM > button:nth-child(2)'
+      '#root > div > div > section > form > div.super-admins_buttonContainer__2-O00 > button:nth-child(2)'
     );
   }
 
-  async createsuperAdmin(firstname, lastname, email, password) {
+  async createSuperAdmin(firstname, lastname, email, password) {
     await this.firstNameInput.setValue(firstname);
     await this.lastNameInput.setValue(lastname);
     await this.emailInput.setValue(email);

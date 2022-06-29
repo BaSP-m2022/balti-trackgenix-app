@@ -23,7 +23,7 @@ describe('Admin testing path', () => {
   });
 
   it('Super admins Form testing', async () => {
-    await expect(SuperadminsForm.adminsForm).toBeDisplayed();
+    await expect(SuperadminsForm.superAdminsForm).toBeDisplayed();
     await expect(SuperadminsForm.firstNameInput).toBeDisplayed();
     await expect(SuperadminsForm.firstNameLabel).toBeDisplayed();
     await expect(SuperadminsForm.lastNameInput).toBeDisplayed();
@@ -41,23 +41,23 @@ describe('Admin testing path', () => {
   });
 
   it('Should not create a super admin', async () => {
-    await SuperadminsForm.createAdmin('', '', '', '');
+    await SuperadminsForm.createSuperAdmin('', '', '', '');
   });
 
   it('Should not create a super admin', async () => {
-    await SuperadminsForm.createAdmin('', 'puente', 'titopuente@gmail.com', 'Titopuente2022');
+    await SuperadminsForm.createSuperAdmin('', 'puente', 'titopuente@gmail.com', 'Titopuente2022');
   });
 
   it('Should not create a super admin', async () => {
-    await SuperadminsForm.createAdmin('tito', '', 'titopuente@gmail.com', 'Titopuente2022');
+    await SuperadminsForm.createSuperAdmin('tito', '', 'titopuente@gmail.com', 'Titopuente2022');
   });
 
   it('Should not create a super admin', async () => {
-    await SuperadminsForm.createAdmin('tito', 'puente', '', 'Titopuente2022');
+    await SuperadminsForm.createSuperAdmin('tito', 'puente', '', 'Titopuente2022');
   });
 
   it('Should not create a super admin', async () => {
-    await SuperadminsForm.createAdmin('tito', 'puente', 'titopuente@gmail.com', '');
+    await SuperadminsForm.createSuperAdmin('tito', 'puente', 'titopuente@gmail.com', '');
   });
 
   // it('Create an Admin successfully', async () => {
