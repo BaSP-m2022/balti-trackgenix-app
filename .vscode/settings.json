@@ -10,14 +10,19 @@
   },
   "eslint.format.enable": true,
   "cSpell.words": [
+    "backbtn",
     "btns",
     "insta",
+    "isactive",
     "Micheletti",
     "pageobjects",
     "redbtn",
     "Rendo",
     "rutes",
+    "superadmin",
+    "superadmins",
     "Timesheet",
-    "timesheets"
+    "timesheets",
+    "totestedit"
   ],
 }

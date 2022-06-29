@@ -24,6 +24,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "test": "npx wdio run ./wdio.conf.js --spec",
+    "pretest": "rimraf allure-results && rimraf allure-report && rimraf test-screenshots && rimraf wdio-logs",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint .",
