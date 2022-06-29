@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
       setTitle('Employee');
       setLinks(employeeLinks);
     } else {
-      setTitle('Shorcuts');
+      setTitle('Shortcuts');
       setLinks(homeLinks);
     }
   };
