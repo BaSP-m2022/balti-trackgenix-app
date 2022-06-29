@@ -27,7 +27,7 @@ describe('Tasks CRUD path testing', () => {
     it('Title: Tasks should be displayed', async () => {
         await expect(Header.tasks).toBeDisplayed();
         Header.tasks.click();
-        await expect(ListPage.title).toBeDisplayed();
-        await expect(ListPage.title).toHaveText('Tasks');
+        await expect(ListPage.listTitle).toBeDisplayed();
+        await expect(ListPage.listTitle).toHaveText('Tasks');
     });
 });
