@@ -10,6 +10,11 @@ describe('Tasks entity test', () => {
     await test.btnTasks.click();
     await expect(browser).toHaveUrl('https://balti-trackgenix-app.vercel.app/tasks');
   })
+  it('Button Back on click', async () => {
+    await test.btnCreateT.click();
+    await test.btnBackTasks.click();
+    await expect(browser).toHaveUrl('https://balti-trackgenix-app.vercel.app/tasks');
+  })
   it('Button Create Tasks on click', async () => {
     await test.btnCreateT.click();
     await expect(browser).toHaveUrl('https://balti-trackgenix-app.vercel.app/tasks/form');
