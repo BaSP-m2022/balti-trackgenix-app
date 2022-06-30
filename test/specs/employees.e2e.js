@@ -63,7 +63,5 @@ describe('Employees entity test', () => {
     await test.btnSave.click()
     await test.resultModalEmp.waitForDisplayed(3000)
     await expect (test.resultModalTitle).toHaveText('"password" is not allowed')
-    /* await test.btnModal.click()
-    await expect(browser).toHaveUrl('https://balti-trackgenix-app.vercel.app/employees/form');*/
   });
 });

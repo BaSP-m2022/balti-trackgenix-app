@@ -8,7 +8,9 @@ class test {
     get textEmployee () { return $('#root > div > div > section > h2') }
     get textTasks () { return $('#root > div > div > section > h2') }
     get resultModal () { return $('#root > div > div > section > div > div') }
-    get resultModalTitle () { return $('#root > div > div > section > div > div > div.Modal_childrenContainer__CYvdG') }
+    get resultModal2 () { return $('#root > div > div > section > div') }
+    get resultModalTitle () { return $('.Modal_childrenContainer__CYvdG') }
+    get resultModalTextTs() { return $('#root > div > div > section > div > div > div.Modal_childrenContainer__CYvdG > h2') }
     get resultModalEmp () { return $('#root > div > div > section > div') }
     // BUTTONS
     get btnAdmin () { return $('#root > div > header > nav > ul > li:nth-child(1) > a'); }
@@ -44,6 +46,7 @@ class test {
     get btnSelectPEmployees () { return $('#root > div > div > section > form > div.Select_inputContainer__1-U2d > select > option:nth-child(2)') }
     get btnOnlySelectProjectTS () { return $('#root > div > div > section > form > div:nth-child(1) > select > option:nth-child(2)') }
     get btnSelectTask () { return $('#root > div > div > section > form > div:nth-child(8) > select > option:nth-child(2)') }
+    get btnCreateLogin () { return $('#root > div > div > section > form > div.auth_btnsContainer__26mUq > button:nth-child(1)') }
     // INPUTS
     get inputFirstName () { return $('#root > div > div > section > form > div:nth-child(1) > input') }
     get inputLastName () { return $('#root > div > div > section > form > div:nth-child(2) > input') }
@@ -57,6 +60,11 @@ class test {
     get inputRole () { return $('#root > div > div > section > form > div:nth-child(3) > input[type=text]') }
     get inputRate () { return $('#root > div > div > section > form > div:nth-child(5) > input[type=number]') }
     get inputWh () { return $('#root > div > div > section > form > div:nth-child(6) > input[type=number]') }
+    get inputDescription2 () { return $('#root > div > div > section > form > div:nth-child(7) > input[type=text]') }
+    get inputNameLogin () { return $('.auth_inputsContainer__2a_pl > div:nth-child(1) > input') }
+    get inputLastNameLogin () { return $('.auth_inputsContainer__2a_pl > div:nth-child(2) > input[type=text]') }
+    get inputEmailLogin () { return $('.auth_inputsContainer__2a_pl > div:nth-child(3) > input[type=email]') }
+    get inputPasswordLogin () { return $('.auth_inputsContainer__2a_pl > div:nth-child(4) > input[type=password]') }
     // ERRORS
     get errorName () { return $('#root > div > div > section > form > div:nth-child(1) > p') }
     get errorProject () { return $('#root > div > div > section > form > div:nth-child(2) > p') }
@@ -99,6 +107,21 @@ class test {
     async setWh(workedhour) {
       await this.inputWh.setValue(workedhour);
     }
+    async setDescription2(description2) {
+      await this.inputDescription2.setValue(description2);
+    }
+    async setNameLogin(namelogin) {
+      await this.inputNameLogin.setValue(namelogin);
+    }
+    async setLastNameLogin(lastnamelogin) {
+      await this.inputLastNameLogin.setValue(lastnamelogin);
+    }
+    async setEmailLogin(emaillogin) {
+      await this.inputEmailLogin.setValue(emaillogin);
+    }
+    async setPasswordLogin(passwordlogin) {
+      await this.inputPasswordLogin.setValue(passwordlogin);
+    }
     // METHODS
     open () {
       return browser.url('https://balti-trackgenix-app.vercel.app/');
@@ -138,7 +161,24 @@ class test {
         break;
     }
   }
+  async completeLogin(inputLogin, inputValue) {
+    switch (inputLogin) {
+      case 'firstname':
+        await this.inputNameLogin.setValue(inputValue);
+        break;
+      case 'lastname':
+        await this.inputLastNameLogin.setValue(inputValue);
+        break;
+      case 'email':
+        await this.inputEmailLogin.setValue(inputValue);
+        break;
+      case 'password':
+        await this.inputPasswordLogin.setValue(inputValue);
+        break;
+    }
+  }
 }
+
 
 module.exports = new test();
 

@@ -102,7 +102,6 @@ describe('Time-Sheets entity test', () => {
     await test.btnSaveTimeSheets.click()
     await expect (test.errorTask).toHaveText('Task cannot be an empty field')
   })
-  /*
   // CREATE TIME-SHEETS SUCCESSFULLY
   it('Tasks validations complete', async ()=> {
     await test.open();
@@ -115,9 +114,8 @@ describe('Time-Sheets entity test', () => {
     await browser.pause(800);
     await test.setRate('22');
     await test.setWh('48');
+    await test.setDescription2('Create timesheets')
     await test.btnSelectTask.click()
     await test.btnSaveTimeSheets.click()
-
-  })*/
+  });
 });
-// Description tiene un bug Ticket: TG-101
