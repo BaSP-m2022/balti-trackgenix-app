@@ -23,6 +23,21 @@ class Login {
   get signupLink() {
     return $('#root > div > div > section > p > a');
   }
+  get invalidPassword() {
+    return $('#root > div > div > section > form > div:nth-child(2) > p');
+  }
+
+  async setEmail(email) {
+    await this.emailInput.setValue(email);
+  }
+  async setPassword(password) {
+    await this.passwordInput.setValue(password);
+  }
+  async loginFunction(email, password) {
+    await this.setEmail(email);
+    await this.setPassword(password);
+    await this.LoginBtn.click();
+  }
 }
 
 module.exports = new Login();

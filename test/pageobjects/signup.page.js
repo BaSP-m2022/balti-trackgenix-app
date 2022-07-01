@@ -35,6 +35,38 @@ class SignUp {
   get loginLink() {
     return $('.auth_btnsContainer__26mUq > p > a');
   }
+  // Employee successfully Registered
+  get successModal() {
+    return $('#root > div > div > section > div > div');
+  }
+  //OK button
+  get modalOkBtn() {
+    return $('.Modal_buttonWrapper__2L1vP > button');
+  }
+  // Error: The email address is already in use by another account.
+  get successModal() {
+    return $('#root > div > div > section > div > div');
+  }
+
+  async setName(name) {
+    await this.nameInput.setValue(name);
+  }
+  async setSurname(surname) {
+    await this.surnameInput.setValue(surname);
+  }
+  async setEmail(email) {
+    await this.emailInput.setValue(email);
+  }
+  async setPassword(password) {
+    await this.passwordInput.setValue(password);
+  }
+  async newItem(name, surname, email, password) {
+    await this.setName(name);
+    await this.setSurname(surname);
+    await this.setEmail(email);
+    await this.setPassword(password);
+    await this.createAccountBtn.click();
+  }
 }
 
 module.exports = new SignUp();

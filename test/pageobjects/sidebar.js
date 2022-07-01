@@ -18,7 +18,7 @@ class Sidebar {
       return $('#root > div > div > aside > nav > ul > li:nth-child(5)');
   }
   get login() {
-      return $('#root > div > div > aside > nav > ul > li:nth-child(6)');
+      return $('#root > div > div > aside > nav > ul > li:nth-child(6) > a');
   }
 
   async titleDisplay() {
