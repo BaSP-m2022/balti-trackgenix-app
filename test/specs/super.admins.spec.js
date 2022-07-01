@@ -97,7 +97,7 @@ describe('Super Admins CRUD path testing', () => {
     await FormPage.modalOkBtn.click();
   });
 
-  it('Super Admin should not be edited', async () => {
+  it('Super Admin should NOT be edited', async () => {
     await expect(ListPage.editBtn).toBeDisplayed();
     await expect(ListPage.editBtn).toBeClickable();
     await ListPage.editBtn.click();
@@ -117,7 +117,7 @@ describe('Super Admins CRUD path testing', () => {
     await FormPage.modalOkBtn.click();
   });
 
-  it('Super Admin should not be deleted', async () => {
+  it('Super Admin should NOT be deleted', async () => {
     await ListPage.deleteCancelFunction();
   });
   /* Delete an item
