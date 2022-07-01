@@ -108,7 +108,7 @@ describe('Projects CRUD path testing', () => {
     await FormPage.backBtn.click();
     await expect(browser).toHaveUrl('https://balti-trackgenix-app.vercel.app/projects');
   });
-
+/*
   it('Project should be edited', async () => {
     await expect(Project.editBtn).toBeDisplayed();
     await expect(Project.editBtn).toBeClickable();
@@ -126,7 +126,7 @@ describe('Projects CRUD path testing', () => {
     await expect(FormPage.modalOkBtn).toBeDisplayed();
     await expect(FormPage.modalOkBtn).toBeClickable();
     await FormPage.modalOkBtn.click();
-  });
+  });*/
 
   it('Project should NOT be deleted', async () => {
     await Project.deleteCancelFunction();
