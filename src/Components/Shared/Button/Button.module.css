@@ -78,7 +78,7 @@
   border: none;
   border-radius: 50%;
   background-color: var(--scarlet);
-  color: var(--grayish-navy);
+  color: #15162A;
   font-size: var(--button);
   font-weight: var(--button-weight);
   font-family: inherit;

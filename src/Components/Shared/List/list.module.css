@@ -37,7 +37,9 @@
 
 .td{
   width: 25%;
+  max-width: 180px;
   text-align: center;
+  word-break: break-word;
   padding: 10px;
 }
 

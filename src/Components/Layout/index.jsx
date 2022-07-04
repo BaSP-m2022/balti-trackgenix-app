@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
     { link: '#', title: 'Why choose Trackgenix?' },
     { link: '#', title: 'About us' },
     { link: '#', title: 'Get in touch' },
-    { link: '#', title: 'Log in' }
+    { link: '/login', title: 'Log in' }
   ];
   const employeeLinks = [
     { link: `/employee`, title: 'Home' },
