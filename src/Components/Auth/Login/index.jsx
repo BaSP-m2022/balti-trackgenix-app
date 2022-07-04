@@ -94,7 +94,7 @@ function Login() {
       </Modal>
       <p className={styles.text}>
         Do you not have an account?{' '}
-        <Link to="/register" className={styles.link}>
+        <Link to="/auth/sign-up" className={styles.link}>
           Sign up
         </Link>
       </p>

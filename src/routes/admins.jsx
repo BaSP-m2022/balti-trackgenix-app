@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Switch, Redirect, useRouteMatch } from 'react-router-dom';
 import PrivateRoute from 'routes/PrivateRoute';
 import Layout from 'Components/Layout';
+import Loading from 'Components/Shared/Loading';
 
 const SuperAdmins = lazy(() => import('Components/SuperAdmins/List'));
 const Admins = lazy(() => import('Components/Admins/List'));
@@ -24,7 +25,7 @@ const AdminRoutes = () => {
 
   'Admin routes:', AdminRoutes;
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loading />}>
       <Layout routes={adminRoutes}>
         <Switch>
           <PrivateRoute path={`${url}/super-admins`} component={SuperAdmins} />

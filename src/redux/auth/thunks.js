@@ -24,7 +24,7 @@ export const login = (credentials) => {
       } = await response.user.getIdTokenResult();
       return await dispatch(loginSuccess({ role, token }));
     } catch (error) {
-      return dispatch(loginError(error));
+      return dispatch(loginError(error.toString()));
     }
   };
 };
