@@ -13,7 +13,7 @@ const employeeRoutes = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Switch>
-        <PrivateRoute exact path={`${url}/employee/home`} component={EmployeeHome} />
+        <PrivateRoute exact path={`${url}/employee`} component={EmployeeHome} />
         <PrivateRoute exact path={`${url}/employee/:id`} />
         <PrivateRoute exact path={`${url}/employee/projects/:id`} component={EmployeeMyProjects} />
         <PrivateRoute exact path={`${url}/employee/profile/:id`} component={EmployeeProfile} />
