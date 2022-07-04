@@ -4,7 +4,7 @@ import Layout from 'Components/Layout';
 
 // const Login = lazy(() => import('Components/Auth/Login'));
 
-const SignUp = lazy(() => import('Components/Auth/Sign-up/index'));
+//const SignUp = lazy(() => import('Components/Auth/Sign-up/index'));
 
 const authRoutes = [{ name: 'Log In', path: '/auth/sign-up' }];
 
@@ -15,7 +15,7 @@ const AuthRoutes = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
           {/* <Route path={`${url}/login`} component={Login} /> */}
-          <Route path={`${url}/sign-up`} component={SignUp} />
+          <Route path={`${url}/sign-up`} />
           <Redirect to={`${url}/login`} />
         </Switch>
       </Suspense>

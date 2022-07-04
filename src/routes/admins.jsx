@@ -1,22 +1,22 @@
 import React, { lazy, Suspense } from 'react';
 import { Switch, Redirect, useRouteMatch } from 'react-router-dom';
-import PrivateRoute from 'Routes/PrivateRoute';
+import PrivateRoute from 'routes/PrivateRoute';
 import Layout from 'Components/Layout';
 
-const SuperAdmins = lazy(() => import('Components/SuperAdmin/SuperAdmins'));
-const Admins = lazy(() => import('Components/SuperAdmin/Admins'));
-const Employees = lazy(() => import('Components/SuperAdmin/Employees'));
-const Tasks = lazy(() => import('Components/SuperAdmin/Tasks'));
-const Projects = lazy(() => import('Components/SuperAdmin/Projects'));
-const TimeSheets = lazy(() => import('Components/SuperAdmin/TimeSheets'));
+const SuperAdmins = lazy(() => import('Components/SuperAdmins/List'));
+const Admins = lazy(() => import('Components/Admins/List'));
+const Employees = lazy(() => import('Components/Employees/List'));
+const Tasks = lazy(() => import('Components/Tasks/List'));
+const Projects = lazy(() => import('Components/Projects/List'));
+const TimeSheets = lazy(() => import('Components/TimeSheets/List'));
 
 const adminRoutes = [
-  { path: '/super-admin/admins', name: 'Admins' },
-  { path: '/super-admin/super-admins', name: 'Super-admins' },
-  { path: '/super-admin/employees', name: 'Employees' },
-  { path: '/super-admin/projects', name: 'Projects' },
-  { path: '/super-admin/time-sheets', name: 'Time-sheets' },
-  { path: '/super-admin/tasks', name: 'Tasks' }
+  { path: '/admin/admins', name: 'Admins' },
+  { path: '/admin/super-admins', name: 'Super-admins' },
+  { path: '/admin/employees', name: 'Employees' },
+  { path: '/admin/projects', name: 'Projects' },
+  { path: '/admin/time-sheets', name: 'Time-sheets' },
+  { path: '/admin/tasks', name: 'Tasks' }
 ];
 
 const AdminRoutes = () => {

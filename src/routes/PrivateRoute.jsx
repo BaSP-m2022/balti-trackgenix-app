@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
-import { Loader } from 'Components/Shared';
+import Loading from 'Components/Shared/Loading';
 
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
   const role = useSelector((state) => state.auth.authenticated?.role);
@@ -12,7 +12,7 @@ const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
   return (
     <>
       {isLoading ? (
-        <Loader show={true} />
+        <Loading show={true} />
       ) : (
         <Route
           {...rest}
