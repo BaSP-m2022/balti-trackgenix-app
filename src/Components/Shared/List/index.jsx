@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './list.module.css';
 import { Link } from 'react-router-dom';
-import Button from '../Button';
 
-const List = ({ data, headers, resource, deleteItem, editItem, linkData, showButtons }) => {
+const List = ({ data, headers, resource, editItem, deleteItem, showButtons }) => {
   return (
     <div className={styles.container}>
       <table className={styles.table}>
@@ -16,13 +15,10 @@ const List = ({ data, headers, resource, deleteItem, editItem, linkData, showBut
                 </th>
               );
             })}
-            {showButtons ? (
+            {showButtons && (
               <>
-                <th className={styles.th}>Edit</th>
-                <th className={styles.th}>Delete</th>
+                <th className={styles.th}>Edit / Delete</th>
               </>
-            ) : (
-              <></>
             )}
           </tr>
         </thead>
@@ -37,30 +33,20 @@ const List = ({ data, headers, resource, deleteItem, editItem, linkData, showBut
                     </td>
                   );
                 })}
-                {showButtons ? (
-                  <>
-                    <td className={styles.td}>
-                      <Link
-                        to={{
-                          pathname: `${resource}/form/${row.id}`,
-                          linkData: linkData,
-                          DBPath: resource,
-                          itemData: row
-                        }}
-                      >
-                        <Button classes="edit" editItem={editItem} _id={row.id} resource={resource}>
-                          &#9998;
-                        </Button>
-                      </Link>
-                    </td>
-                    <td className={styles.td}>
-                      <span _id={row.id} resource={resource} onClick={() => deleteItem(row.id)}>
-                        <Button classes="close">X</Button>
-                      </span>
-                    </td>
-                  </>
-                ) : (
-                  <></>
+                {showButtons && (
+                  <td className={styles.td}>
+                    {editItem ? (
+                      <p className={styles.btnsContainer}>
+                        <span onClick={() => editItem(row.id)}>&#9998;</span>
+                        <span onClick={() => deleteItem(row.id)}> &#128465;</span>
+                      </p>
+                    ) : (
+                      <p className={styles.btnsContainer}>
+                        <Link to={`${resource}/${row.id}`}> &#9998;</Link>
+                        <span onClick={() => deleteItem(row.id)}> &#128465;</span>
+                      </p>
+                    )}
+                  </td>
                 )}
               </tr>
             );
